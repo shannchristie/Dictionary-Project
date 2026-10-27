@@ -129,7 +129,7 @@ loadPhotos(word);
         entry || error || loading ? "page--results" : ""
       }`}
     >
-      {/* Brand header */}
+      
       <header className="topbar">
         <a
           href="#"
@@ -147,7 +147,8 @@ loadPhotos(word);
         
       </header>
 
-      {/* Main search area */}
+      
+
       <section
         className={`search-panel ${
           entry || error || loading
@@ -235,7 +236,7 @@ loadPhotos(word);
         </div>
       </section>
 
-      {/* Results expand below the search area */}
+     
       {(loading || error || entry) && (
         <section className="results" aria-live="polite">
           {loading && (
@@ -271,7 +272,7 @@ loadPhotos(word);
 
           {entry && !loading && (
             <>
-              {/* Word information */}
+              
               <article className="word-card">
                 <div className="word-heading">
                   <div>
@@ -333,7 +334,7 @@ loadPhotos(word);
                 </div>
               </article>
 
-              {/* Definitions heading */}
+              
               <div className="meaning-header">
                 <div>
                   <div className="eyebrow">
@@ -349,7 +350,7 @@ loadPhotos(word);
                 </span>
               </div>
 
-              {/* One card for each part of speech */}
+              
               <div className="meaning-list">
                 {(entry.meanings || []).map(
                   (meaning, meaningIndex) => (
@@ -408,7 +409,8 @@ loadPhotos(word);
                         )}
                       </ol>
 
-                      {/* Related words */}
+                      
+
                       {(meaning.synonyms?.length > 0 ||
                         meaning.antonyms?.length > 0) && (
                         <div className="related-words">
@@ -440,7 +442,7 @@ loadPhotos(word);
                 )}
               </div>
 
-{/* Photo gallery */}
+
 <section className="photo-section">
   <div className="photo-heading">
     <div>
@@ -518,7 +520,7 @@ loadPhotos(word);
         </section>
       )}
 
-      {/* Welcome message before the first search */}
+      
       {!entry && !error && !loading && (
         <section className="welcome-note">
           
@@ -528,7 +530,23 @@ loadPhotos(word);
       )}
 
       <footer className="footer">
-        <span>Made by Shannen </span>
+        <span>Made by Shannen · Hosted on{" "}
+        <a
+          href="https://github.com/shannchristie/Dictionary-Project"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://heroic-lily-e259ca.netlify.app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Netlify
+        </a>
+        </span>
         <span className="footer-divider">·</span>
       </footer>
     </main>
